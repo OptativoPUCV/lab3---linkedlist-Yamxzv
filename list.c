@@ -32,9 +32,9 @@ List * createList()
 {
   List * list = (List *)malloc(sizeof(List));
 
+  list->current = NULL;
   list->head = NULL;
   list->tail = NULL;
-  list->current = NULL;
   
   return list;
 }
