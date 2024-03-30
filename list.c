@@ -163,7 +163,12 @@ void * popCurrent(List * list)
     derecha->prev = izquierda;
   }
   
-  return NULL;
+  void * dato = list->current->data;
+
+  free(list->current);
+  list->current = NULL;
+  
+  return dato;
 }
 
 void cleanList(List * list) {
