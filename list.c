@@ -159,7 +159,9 @@ void * popCurrent(List * list)
     izquierda->next = derecha;
   }
 
-  if (derecha != NULL)
+  if (derecha != NULL){
+    derecha->prev = izquierda;
+  }
   
   return NULL;
 }
